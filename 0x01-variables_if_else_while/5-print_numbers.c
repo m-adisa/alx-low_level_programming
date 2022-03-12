@@ -8,8 +8,7 @@ int main(void)
 {
 	int i;
 
-	i = 0;
-	for (i < 10; i++)
+	for (i = o; i < 10; i++)
 	{
 		printf("%i", i);
 	}
