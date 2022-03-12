@@ -1,11 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h.>
+#include <stdio.h>
 /**
  * main -Entry point
  *
  * Description: print the last digit of
- * a rndom number
+ * a random number
  *
  * Return: 0 (Success)
  */
@@ -15,7 +15,7 @@ int main(void)
 	int m;
 
 	srand(time(0));
-	n = rand() - RAND_MAX / 2;
+	n = rand - RAND_MAX / 2;
 	m = n % 10;
 
 	if (m > 5)
