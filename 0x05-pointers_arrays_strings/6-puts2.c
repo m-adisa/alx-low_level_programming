@@ -12,6 +12,7 @@ void puts2(char *str)
 		i++;
 		str++;
 	}
+	i--;
 
 	while (j < i)
 	{
