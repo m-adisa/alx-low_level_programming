@@ -1,23 +1,26 @@
 #include "main.h"
+
 /**
- * print_rev - main
- * @s: the string to manipulate
+  * print_rev - prints string
+  * @s: input string
+  * Return: no return
  */
+
 void print_rev(char *s)
 {
-	int i;
+	int count = 0;
 
 	while (*s != '\0')
 	{
 		s++;
-		i++;
+		count++;
 	}
 
-	while (i > 0)
+	while (count > 0)
 	{
 		s--;
 		_putchar(*s);
-		i--;
+		count--;
 	}
 	_putchar('\n');
 }
