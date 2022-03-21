@@ -2,8 +2,6 @@
 /**
  * _strlen - main
  * @s: the array to count
- * @n: the counter
- * @i: for the loop
  * Return: the length
  */
 int _strlen(char *s)
