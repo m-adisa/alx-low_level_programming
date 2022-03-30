@@ -1,5 +1,6 @@
 #include "main.h"
 /**
+ * _puts_recursion - main
  * @s: the string to be displayed
  */
 void _puts_recursion(char *s)
