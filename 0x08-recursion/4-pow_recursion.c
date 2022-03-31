@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 /**
  * _pow_recursion - main
  * @x: squared
