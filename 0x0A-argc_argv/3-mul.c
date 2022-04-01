@@ -8,16 +8,15 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, sum = 1;
+	int sum;
 
-	if (argc <= 2)
+	if (argc != 3)
 	{
 		printf("Error");
 		return (1);
 	}
 
-	for (i = 1; i < argc; i++)
-		sum *= atoi(argv[i]);
+	sum = atoi(argv[1]) * atoi(argv[2]);
 
 	printf("%d\n", sum);
 
