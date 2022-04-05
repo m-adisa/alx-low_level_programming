@@ -2,8 +2,8 @@
 #include <stdlib.h>
 /**
  * alloc_grid - main
- * width: width of array
- * height: height of array
+ * @width: width of array
+ * @height: height of array
  * Return: pointer to 2-D array
  */
 int **alloc_grid(int width, int height)
@@ -14,7 +14,7 @@ int **alloc_grid(int width, int height)
 	if (width < 1 || height < 1)
 		return (NULL);
 
-	ary = malloc(sizeof(int) * height);
+	ary = malloc(sizeof(int *) * height);
 
 	if (ary == NULL)
 	{
