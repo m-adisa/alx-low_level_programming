@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * count_word - helper functoion
+ * count_words - helper functoion
  * @s: string
  * Return: number of words
  */
@@ -25,7 +25,6 @@ int count_words(char *s)
 
 	return (w);
 }
-
 /**
  * **strtow - main
  * @str: string to split
