@@ -40,7 +40,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return (NULL);
 	}
-	
+
 	filler = mem;
 
 	for (index = 0; index < old_size && index < new_size; index++)
