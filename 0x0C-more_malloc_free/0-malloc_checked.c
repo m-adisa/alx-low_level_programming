@@ -1,5 +1,10 @@
 #include "main.h"
 #include <stdlib.h>
+/**
+ * malloc_checked - main
+ * @b: amount of bytes
+ * Return: pointer to memory
+ */
 void *malloc_checked(unsigned int b)
 {
 	char *ptr;
