@@ -14,10 +14,7 @@ void print_all(const char * const format, ...);
  */
 void print_char(va_list arg)
 {
-	char letter;
-
-	letter = va_arg(arg, int);
-	printf("%c", letter);
+	printf("%c", va_arg(arg, int));
 }
 
 /**
@@ -26,10 +23,7 @@ void print_char(va_list arg)
  */
 void print_int(va_list arg)
 {
-	int num;
-
-	num = va_arg(arg, int);
-	printf("%d", num);
+	printf("%d", va_arg(arg, int));
 }
 
 /**
@@ -38,10 +32,7 @@ void print_int(va_list arg)
  */
 void print_float(va_list arg)
 {
-	float y;
-
-	y = va_arg(arg, double);
-	printf("%f", y);
+	printf("%f", va_arg(arg, double));
 }
 
 /**
@@ -55,11 +46,7 @@ void print_string(va_list arg)
 	str = va_arg(arg, char *);
 
 	if (str == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-
+		str = "(nil)";
 	printf("%s", str);
 }
 
@@ -74,6 +61,7 @@ void print_all(const char *const format, ...)
 	va_list args;
 	int i = 0, j = 0;
 	char *separator = "";
+
 	printer_t funcs[] = {
 		{"c", print_char},
 		{"i", print_int},
@@ -85,12 +73,8 @@ void print_all(const char *const format, ...)
 
 	while (format && (*(format + 1)))
 	{
-		j = 0;
-
-		while (j < 4 && (*(format + i) != *(funcs[j].symbol)))
-			j++;
-
-		if (j < 4)
+		j = i % 4;
+		if (funcs[j].symbol[0] == format[i / 4])
 		{
 			printf("%s", separator);
 			funcs[j].print(args);
