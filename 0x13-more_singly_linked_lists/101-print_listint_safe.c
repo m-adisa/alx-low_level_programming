@@ -36,6 +36,7 @@ size_t print_listint_safe(const listint_t *head)
 	while (head != NULL)
 	{
 		new = malloc(sizeof(listp_t));
+
 		if (new == NULL)
 			exit(98);
 
