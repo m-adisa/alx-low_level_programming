@@ -9,15 +9,21 @@
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	unsigned int i = 0;
+	listint_t *srch;
 
-	while (i <= index)
+	srch = head;
+
+	if (srch == NULL)
+		return (0);
+
+	while ((i < index) && (srch != NULL))
 	{
-		if (head == NULL)
-			return (0);
-
-		head = head->next;
+		srch = srch->next;
 		i++;
 	}
 
-	return (head);
+	if ((i == index) && (srch != NULL))
+		return (srch);
+	else
+		return (0);
 }
