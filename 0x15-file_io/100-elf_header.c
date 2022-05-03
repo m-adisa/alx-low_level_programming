@@ -1,8 +1,3 @@
-/*
- * File: 100-elf_header.c
- * Auth: Suara Ayomide
- */
-
 #include <elf.h>
 #include <sys/types.h>
 #include <sys/stat.h>
