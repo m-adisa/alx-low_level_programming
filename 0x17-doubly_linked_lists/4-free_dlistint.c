@@ -2,10 +2,9 @@
 
 /**
  * free_dlistint - frees a doubly linked list
- * @head: head of the list
- * Return: nothing
+ * @head: pointer to the list to free
  */
-void free_dlistint(dlistint_t *head);
+void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *temp;
 
