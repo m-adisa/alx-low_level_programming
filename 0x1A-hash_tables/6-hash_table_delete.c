@@ -2,7 +2,7 @@
 
 /**
  * free_list - frees a linked list
- * @head: hash_node_t list
+ * @head: hash_node_t list to be freed
  */
 void free_list(hash_node_t *head)
 {
@@ -18,9 +18,8 @@ void free_list(hash_node_t *head)
 	}
 }
 
-
 /**
- * hash_table_delete -delete a hash table
+ * hash_table_delete - deletes a hash table
  * @ht: hash table to be deleted
  */
 void hash_table_delete(hash_table_t *ht)
@@ -30,7 +29,7 @@ void hash_table_delete(hash_table_t *ht)
 	if (!ht)
 		return;
 
-	for (i = 0; i < ht->; i++)
+	for (i = 0; i < ht->size; i++)
 		free_list(ht->array[i]);
 	free(ht->array);
 	free(ht);
