@@ -1,0 +1,14 @@
+# Config
+CC = gcc
+SRC = $(*.c)
+OBJ = $(*.o)
+NAME = school
+
+# Main
+all: ${NAME}
+
+NAME: ${OBJ}
+	${CC} ${OBJ} -o $@
+
+OBJ: ${SRC}
+	${CC} ${SRC} -c $<
