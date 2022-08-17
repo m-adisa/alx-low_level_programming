@@ -4,7 +4,5 @@ OBJ = $(SRC:%.c=%.o)
 NAME = school
 
 # Main
-all: ${NAME}
-
-NAME: ${OBJ}
+all: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
